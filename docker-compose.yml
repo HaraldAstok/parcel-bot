@@ -10,6 +10,8 @@ services:
       - ./parcel-be:/app #mounting our host dir to the docker container
       #- /app/node_modules #mount be directori to docker container
     command: npm run start:dev
+    # depends_on:
+    #   - db
     depends_on:
       - postgres
     environment:
@@ -28,7 +30,7 @@ services:
     command: npm run start
     volumes:
       - ./parcel-fe:/frontend/app
-      - /frontend/app/node_modules
+      # - /frontend/app/node_modules
     ports:
       - 4200:4200
     links:
@@ -52,3 +54,17 @@ services:
       PGADMIN_DEFAULT_PASSWORD: password
     ports:
       - 5050:80
+
+  # db:
+  #   image: mysql:5.7
+  #   environment:
+  #     MYSQL_DATABASE: 'db'
+  #     MYSQL_USER: 'user'
+  #     MYSQL_PASSWORD: 'password'
+  #     MYSQL_ROOT_PASSWORD: 'password'
+  #   ports:
+  #     - '3306:3306'
+  #   expose:
+  #     - '3306'
+  #   # volumes:
+  #   #   - my-db:/var/lib/mysq
