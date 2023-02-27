@@ -10,7 +10,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { ParcelComponent } from './parcel/components/parcel.component';
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ParcelComponent } from './parcel/components/parcel.component';
     MatCardModule,
     MatFormFieldModule,
     MatTableModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

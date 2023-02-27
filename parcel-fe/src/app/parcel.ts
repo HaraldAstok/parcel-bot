@@ -5,4 +5,5 @@ export class Parcel {
   street_address!: string;
   town!: string;
   country!: string;
+  delivery_date!: string;
 }

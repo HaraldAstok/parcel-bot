@@ -15,6 +15,7 @@ export class ParcelComponent implements OnInit {
     'street_address',
     'town',
     'country',
+    'delivery_date'
   ];
   dataSource: Parcel[] = [];
   parcel: any = {};
@@ -36,6 +37,7 @@ export class ParcelComponent implements OnInit {
   }
 
   createParcel(f: { value: Parcel }) {
+    console.log('PARCEL ->', f.value)
     this.apiService.createParcel(f.value).subscribe((result) => {
       console.log('result ->', result);
     });

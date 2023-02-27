@@ -18,6 +18,9 @@ export class Parcel {
 
   @Column()
   country: string;
+
+  @Column()
+  delivery_date: string
 }
 
 @Entity()
