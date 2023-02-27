@@ -39,26 +39,6 @@
         <td mat-cell *matCellDef="let element">{{ element.country }}</td>
       </ng-container>
 
-      <ng-container matCloumnDef="action">
-        <th mat-header-cell *matHeaderCellDef>Actions</th>
-        <td mat-cell *matCellDef="let element">
-          <button
-            mat-raised-button
-            (click)="createParcel(element.id)"
-            color="secondary"
-          >
-            Delete Parcel
-          </button>
-          <button
-            mat-raised-button
-            (click)="selectParcel(element)"
-            color="secondary"
-          >
-            Select Parcel
-          </button>
-        </td>
-      </ng-container>
-
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
@@ -119,7 +99,6 @@
           [(ngModel)]="parcel.country"
           required
         />
-        
       </mat-form-field>
     </form>
   </mat-card-content>

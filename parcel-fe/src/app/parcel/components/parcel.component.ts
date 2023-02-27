@@ -8,14 +8,6 @@ import { Parcel } from 'src/app/parcel';
   styleUrls: ['./parcel.component.scss'],
 })
 export class ParcelComponent implements OnInit {
-  countries: string[] = [
-    'Estonia',
-    'Latvia',
-    'Lithuania',
-    'Finland',
-    'Sweden',
-    'Norway',
-  ];
   displayedColumns: string[] = [
     'id',
     'sku',
